@@ -1,5 +1,5 @@
 {% set name = "synphot" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e127fa4ac98fe5cb1335b76c0de18fef4159849a302f03517f7c83c530cb92e9
+  sha256: 3ba886edd4f411a80f87fcf6130016276f94669da4d11de5c20f15ae30ae3561
   patches:
     - setup.cfg.patch
 
