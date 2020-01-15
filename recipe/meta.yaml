@@ -20,6 +20,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools_scm
     - numpy
     - extension-helpers
   run:
