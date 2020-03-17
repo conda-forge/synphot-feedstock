@@ -1,17 +1,17 @@
 {% set name = "synphot" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ba886edd4f411a80f87fcf6130016276f94669da4d11de5c20f15ae30ae3561
+  sha256: 05855e2b9c64a545ed1d14d9d11e9d6c88cf071886bb9406d02699023ccc1971
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py2k]
 
 requirements:
