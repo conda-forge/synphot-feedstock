@@ -21,11 +21,15 @@ requirements:
     - pip
     - python
     - setuptools_scm
-    - numpy
+    - numpy 1.16.*  # [py==36]
+    - numpy 1.16.*  # [py==37]
+    - numpy 1.17.*  # [py>=38]
     - extension-helpers
   run:
     - astropy
-    - numpy
+    - numpy 1.16.*  # [py==36]
+    - numpy 1.16.*  # [py==37]
+    - numpy 1.17.*  # [py>=38]
     - python
     - scipy
 
