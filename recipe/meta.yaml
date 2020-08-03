@@ -1,5 +1,5 @@
 {% set name = "synphot" %}
-{% set version = "0.3" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05855e2b9c64a545ed1d14d9d11e9d6c88cf071886bb9406d02699023ccc1971
+  sha256: b33d25d43ae875fdaa7760729d7aeeb16293325a71ba06e8fdd27892be83daa2
 
 build:
   number: 0
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://www.github.com/spacetelescope/synphot_refactor
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: Synthetic photometry
