@@ -10,7 +10,7 @@ source:
   sha256: 262e1dcfc09d819cf67e55a8cc40f1e0b805f7a278de1270ae6a61d51730683a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -20,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
@@ -28,7 +29,6 @@ requirements:
     - extension-helpers
   run:
     - astropy
-    - {{ pin_compatible('numpy') }}
     - python
     - scipy
 
