@@ -1,16 +1,16 @@
 {% set name = "synphot" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 262e1dcfc09d819cf67e55a8cc40f1e0b805f7a278de1270ae6a61d51730683a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4cb384a1b45ea301ad30690a1af2fbb485023160049458ac1c320bb81c782e76
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -27,6 +27,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
     - setuptools_scm
     - numpy
     - extension-helpers
