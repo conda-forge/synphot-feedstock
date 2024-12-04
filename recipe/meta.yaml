@@ -10,7 +10,7 @@ source:
   sha256: 4cb384a1b45ea301ad30690a1af2fbb485023160049458ac1c320bb81c782e76
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -32,7 +32,7 @@ requirements:
     - numpy
     - extension-helpers
   run:
-    - astropy
+    - astropy-base
     - python
     - scipy
 
