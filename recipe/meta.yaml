@@ -10,15 +10,12 @@ source:
   sha256: 4cb384a1b45ea301ad30690a1af2fbb485023160049458ac1c320bb81c782e76
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
@@ -32,9 +29,9 @@ requirements:
     - numpy
     - extension-helpers
   run:
-    - astropy-base
     - python
     - scipy
+    - astropy-base
 
 test:
   imports:
@@ -50,7 +47,7 @@ about:
     This is a replacement for IRAF STSDAS SYNPHOT and ASTROLIB PYSYNPHOT,
     utilizing Astropy and covering the non-instrument specific portions of
     the old packages.
-  doc_url: https://synphot.readthedocs.io/en/latest/
+  doc_url: https://synphot.readthedocs.io
   dev_url: https://www.github.com/spacetelescope/synphot_refactor
 
 extra:
