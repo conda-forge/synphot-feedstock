@@ -11,7 +11,7 @@ Summary: Synthetic photometry
 
 Development: https://www.github.com/spacetelescope/synphot_refactor
 
-Documentation: https://synphot.readthedocs.io/en/latest/
+Documentation: https://synphot.readthedocs.io
 
 This is a replacement for IRAF STSDAS SYNPHOT and ASTROLIB PYSYNPHOT,
 utilizing Astropy and covering the non-instrument specific portions of
