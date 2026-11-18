@@ -1,5 +1,5 @@
 {% set name = "synphot" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ca81585a61379886c1b3e1c09062352645fc7a51ba04f183ea458b671907da6
+  sha256: 5cd98a616355bf001d2e5c20dd7e6431a1090115de63ce43ba3ec08d9a04da37
 
 build:
   number: 0
